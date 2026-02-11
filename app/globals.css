@@ -205,7 +205,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 
   /* Hero */
   .hero { min-height: 100vh; }
-  .hero-content { padding: 120px 16px 60px; }
+  .hero-content { padding: 88px 16px 60px; display: flex; flex-direction: column; justify-content: center; }
   .hero-eyebrow { font-size: 11px; letter-spacing: 1.5px; margin-bottom: 16px; }
   .hero-desc { font-size: 15px; margin-bottom: 32px; }
   .hero-actions { flex-direction: column; }
@@ -293,7 +293,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
   .logo-sub-text { font-size: 8px; letter-spacing: 2.5px; }
 
   /* Hero */
-  .hero-content { padding: 110px 14px 50px; }
+  .hero-content { padding: 80px 14px 50px; }
   .hero-title { letter-spacing: -0.5px; }
   .hero-desc { font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
   .btn-primary, .btn-outline { padding: 14px 20px; font-size: 14px; }
