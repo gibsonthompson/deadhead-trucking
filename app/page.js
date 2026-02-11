@@ -8,17 +8,6 @@ const CheckIcon = ({s=18}) => <svg width={s} height={s} viewBox="0 0 24 24" fill
 const ClockIcon = ({s=18}) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
 const PinIcon = ({s=16}) => <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
 
-const Logo = ({iconSize=24, nameSize=18, subSize=11}) => (
-  <div style={{display:'flex',alignItems:'center',gap:14}}>
-    <i className="fa-solid fa-skull" style={{fontSize:iconSize,color:'#c0392b'}}></i>
-    <div style={{display:'flex',flexDirection:'column',gap:1}}>
-      <span style={{fontFamily:"'Oswald',sans-serif",fontWeight:700,fontSize:nameSize,color:'#f0f2f5',textTransform:'uppercase',letterSpacing:3,lineHeight:1}}>Deadhead</span>
-      <div style={{width:'100%',height:1,background:'#c0392b'}}></div>
-      <span style={{fontFamily:"'Plus Jakarta Sans',sans-serif",fontWeight:600,fontSize:subSize,color:'#5a6a7e',textTransform:'uppercase',letterSpacing:4,lineHeight:1.3}}>Trucking LLC</span>
-    </div>
-  </div>
-)
-
 export default function HomePage() {
   const [fd, setFd] = useState({ name:'', company:'', email:'', phone:'', origin:'', destination:'', freight_type:'', details:'' })
   const [ss, setSs] = useState('idle')
@@ -36,7 +25,7 @@ export default function HomePage() {
   return (<>
     {/* NAV */}
     <nav><div className="nav-inner">
-      <a href="#" className="logo" style={{textDecoration:'none'}}><Logo iconSize={28} nameSize={18} subSize={9}/></a>
+      <a href="#" className="logo-stacked"><div className="logo-main">DEADHEAD</div><div className="logo-divider"></div><div className="logo-sub-text">TRUCKING LLC</div></a>
       <ul className={`nav-links ${mo?'active':''}`}>
         <li><a href="#about" onClick={()=>setMo(false)}>About</a></li>
         <li><a href="#services" onClick={()=>setMo(false)}>Services</a></li>
@@ -50,7 +39,7 @@ export default function HomePage() {
     {/* HERO */}
     <section className="hero"><div className="hero-bg"/><div className="hero-content">
       <div className="hero-eyebrow">Aurora, IL — Nationwide Coverage</div>
-      <h1 className="hero-title">Reliable Freight<br/>Across All 48 States.</h1>
+      <h1 className="hero-title">Reliable freight<br/>across all 48 states.</h1>
       <p className="hero-desc">Deadhead Trucking LLC is a federally authorized interstate carrier with 82+ trucks, 100+ drivers, and over 45 million miles logged annually. General freight, vehicle transport, and hazmat certified.</p>
       <div className="hero-actions">
         <a href="#quote" className="btn-primary">Request a Quote →</a>
@@ -76,12 +65,12 @@ export default function HomePage() {
     <section className="section" id="about"><div className="about-grid">
       <div>
         <div className="section-label">About Us</div>
-        <h2 className="section-title">Built on Reliability. Driven by Results.</h2>
+        <h2 className="section-title">Built on reliability. Driven by results.</h2>
         <p className="section-desc">Deadhead Trucking LLC is an authorized interstate freight carrier headquartered in Aurora, Illinois — in the heart of the Chicago metropolitan logistics corridor. We specialize in general freight, motor vehicle transport, and hazmat-certified hauling.</p>
         <p className="section-desc">With over 82 power units and 102 professional drivers, we&apos;ve built our reputation on consistent on-time performance, transparent communication, and operational scale that brokers and shippers depend on.</p>
       </div>
       <div className="about-image">
-        <img src="/about-bg.jpg" alt="Deadhead Trucking fleet on highway"/>
+        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80" alt="Fleet"/>
         <div className="about-badge"><div className="about-badge-dot"/><div><div className="about-badge-text">FMCSA Active &amp; Authorized</div><div className="about-badge-sub">Last updated Feb 2026</div></div></div>
       </div>
     </div></section>
@@ -95,7 +84,7 @@ export default function HomePage() {
 
     {/* SERVICES */}
     <section className="section" id="services">
-      <div className="services-header"><div className="section-label">Our Services</div><h2 className="section-title">What We Haul</h2><p className="section-desc">From dry van freight to vehicle transport and hazmat loads — we have the equipment, credentials, and team to move it.</p></div>
+      <div className="services-header"><div className="section-label">Our Services</div><h2 className="section-title">What we haul</h2><p className="section-desc">From dry van freight to vehicle transport and hazmat loads — we have the equipment, credentials, and team to move it.</p></div>
       <div className="services-grid">
         {[
           { icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><rect x="1" y="6" width="22" height="12" rx="1"/><path d="M6 6V4a2 2 0 012-2h8a2 2 0 012 2v2"/></svg>, t:'General Freight', d:'Full truckload general freight services across the continental US. Dry van capacity for palletized goods, boxed cargo, and standard commodities.', f:['Full Truckload (FTL)','Dry Van Transport','Palletized & Boxed Cargo','Door-to-Door Delivery'] },
@@ -109,28 +98,38 @@ export default function HomePage() {
 
     {/* WHY */}
     <section className="why-section"><div className="why-inner">
-      <div className="section-label">Why Deadhead</div><h2 className="section-title">The Carrier Brokers Keep Coming Back To</h2>
+      <div className="section-label">Why Deadhead</div><h2 className="section-title">The carrier brokers keep coming back to</h2>
       <div className="why-grid">
         {[
-          {n:'01',t:'Scale You Can Count On',d:'82+ trucks and 102 drivers mean we have capacity to cover your lanes — even during peak season.'},
-          {n:'02',t:'FMCSA Authorized & Compliant',d:'Fully authorized for-hire interstate carrier with active USDOT and MC authority.'},
-          {n:'03',t:'45+ Million Miles Proven',d:"Our annual mileage speaks for itself. We're a proven operator moving freight at scale, day in and day out."},
-          {n:'04',t:'Multi-Cargo Capability',d:'General freight, motor vehicles, and hazmat — three verticals under one authority. Fewer vendors, better rates.'},
+          {n:'01',t:'Scale you can count on',d:'82+ trucks and 102 drivers mean we have capacity to cover your lanes — even during peak season.'},
+          {n:'02',t:'FMCSA authorized & compliant',d:'Fully authorized for-hire interstate carrier with active USDOT and MC authority.'},
+          {n:'03',t:'45+ million miles proven',d:"Our annual mileage speaks for itself. We're a proven operator moving freight at scale, day in and day out."},
+          {n:'04',t:'Multi-cargo capability',d:'General freight, motor vehicles, and hazmat — three verticals under one authority. Fewer vendors, better rates.'},
         ].map(w=><div className="why-card" key={w.n}><div className="why-num">{w.n}</div><div><h3>{w.t}</h3><p>{w.d}</p></div></div>)}
       </div>
     </div></section>
 
     {/* COVERAGE */}
-    <section className="section" id="coverage">
-      <div className="section-label">Service Area</div>
-      <h2 className="section-title">Coast to Coast, Out of Chicago</h2>
-      <p className="section-desc">Headquartered in Aurora, IL — 40 miles west of Chicago — we operate interstate routes covering all 48 contiguous states with access to I-88, I-80, I-55, and I-294.</p>
-      <div className="cov-routes" style={{maxWidth:640}}>
-        {[['Midwest Hub Operations','Core'],['East Coast Corridors','High Volume'],['Southern & Southeast Routes','Growing'],['West Coast & Mountain States','Full Coverage'],['Texas & Southwest Triangle','Active']].map(([n,t])=>(
-          <div className="cov-route" key={n}><span className="cov-route-name">{n}</span><span className="cov-tag">{t}</span></div>
-        ))}
+    <section className="section" id="coverage"><div className="cov-grid">
+      <div>
+        <div className="section-label">Service Area</div><h2 className="section-title">Coast to coast, out of Chicago</h2>
+        <p className="section-desc">Headquartered in Aurora, IL — 40 miles west of Chicago — we operate interstate routes covering all 48 contiguous states with access to I-88, I-80, I-55, and I-294.</p>
+        <div className="cov-routes">
+          {[['Midwest Hub Operations','Core'],['East Coast Corridors','High Volume'],['Southern & Southeast Routes','Growing'],['West Coast & Mountain States','Full Coverage'],['Texas & Southwest Triangle','Active']].map(([n,t])=>(
+            <div className="cov-route" key={n}><span className="cov-route-name">{n}</span><span className="cov-tag">{t}</span></div>
+          ))}
+        </div>
       </div>
-    </section>
+      <div className="cov-map-box">
+        <div className="cov-map-label">Continental U.S. Coverage</div>
+        <svg viewBox="0 0 200 120" fill="none" style={{width:'100%',maxWidth:320}}>
+          <path d="M30 30 L50 22 L80 20 L110 22 L140 25 L160 32 L168 42 L170 55 L165 68 L155 78 L140 86 L120 92 L100 95 L80 96 L60 94 L45 88 L35 78 L28 65 L26 50 L28 38Z" stroke="var(--border)" strokeWidth="1" fill="none"/>
+          <circle cx="118" cy="42" r="5" fill="#c0392b" opacity="0.2"/><circle cx="118" cy="42" r="2.5" fill="#c0392b"/>
+        </svg>
+        <div className="cov-hq-name">Aurora, Illinois</div>
+        <div className="cov-hq-detail">Company Headquarters</div>
+      </div>
+    </div></section>
 
     {/* CREDENTIALS */}
     <div className="creds"><div className="creds-inner">
@@ -142,15 +141,11 @@ export default function HomePage() {
     {/* DRIVERS */}
     <section className="drivers" id="drivers"><div className="drivers-bg"/><div className="drivers-inner">
       <div className="section-label" style={{justifyContent:'center',display:'flex'}}>Now Hiring</div>
-      <h2 className="section-title" style={{textAlign:'center'}}>Drive With Deadhead</h2>
+      <h2 className="section-title" style={{textAlign:'center'}}>Drive with Deadhead</h2>
       <p className="section-desc" style={{textAlign:'center',margin:'0 auto'}}>We&apos;re looking for experienced CDL drivers. Competitive pay, consistent miles, and a team that respects the work you do.</p>
       <div className="driver-benefits">
-        {[
-          {icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>,t:'Competitive Pay',d:'Top-of-market rates with consistent weekly miles'},
-          {icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,t:'Steady Miles',d:'45M+ fleet miles annually keeps you moving'},
-          {icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,t:'Driver-First Culture',d:'Dispatch that communicates and actually supports'},
-        ].map(b=>(
-          <div className="benefit" key={b.t}><div className="benefit-icon">{b.icon}</div><div className="benefit-title">{b.t}</div><div className="benefit-desc">{b.d}</div></div>
+        {[['💰','Competitive Pay','Top-of-market rates with consistent weekly miles'],['🛣️','Steady Miles','45M+ fleet miles annually keeps you moving'],['🤝','Driver-First Culture','Dispatch that communicates and actually supports']].map(([i,t,d])=>(
+          <div className="benefit" key={t}><div className="benefit-icon">{i}</div><div className="benefit-title">{t}</div><div className="benefit-desc">{d}</div></div>
         ))}
       </div>
       <div className="driver-phone-label">Call to apply</div>
@@ -160,7 +155,7 @@ export default function HomePage() {
     {/* QUOTE */}
     <section className="quote" id="quote"><div className="quote-inner">
       <div className="quote-info">
-        <div className="section-label">Get Started</div><h2 className="section-title">Request a Freight Quote</h2>
+        <div className="section-label">Get Started</div><h2 className="section-title">Request a freight quote</h2>
         <p className="section-desc">Whether you&apos;re a broker or shipper looking for a reliable carrier, fill out the form and our dispatch team will get back to you.</p>
         <div className="contact-items">
           <div className="contact-item"><div className="contact-icon"><PhoneIcon/></div><div><h4>Phone</h4><p><a href="tel:3312644842">(331) 264-4842</a></p></div></div>
@@ -169,7 +164,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="form-card">
-        <div className="form-title">Tell Us About Your Freight</div>
+        <div className="form-title">Tell us about your freight</div>
         <form onSubmit={hs}>
           <div className="form-row">
             <div className="form-group"><label>Full Name</label><input name="name" value={fd.name} onChange={hc} placeholder="Your name" required/></div>
@@ -196,7 +191,7 @@ export default function HomePage() {
     <footer><div className="footer-inner">
       <div className="footer-top">
         <div className="footer-brand">
-          <a href="#" style={{textDecoration:'none'}}><Logo iconSize={24} nameSize={16} subSize={9}/></a>
+          <a href="#" className="logo-stacked"><div className="logo-main">DEADHEAD</div><div className="logo-divider"></div><div className="logo-sub-text">TRUCKING LLC</div></a>
           <p>Federally authorized interstate carrier based in Aurora, IL. General freight, vehicle transport, and hazmat hauling across all 48 states.</p>
         </div>
         <div className="footer-col"><h4>Links</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#coverage">Coverage</a></li><li><a href="#drivers">Drivers</a></li><li><a href="#quote">Get a Quote</a></li></ul></div>

@@ -39,7 +39,7 @@ export default function LoginPage() {
       .lk:hover { color:#c0392b; }
     `}</style>
     <div className="lp"><div className="lc">
-      <div className="ll"><div className="ll-i"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" width="22" height="22"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div className="ll-t">Deadhead Trucking</div><div className="ll-s">Dashboard</div></div></div>
+      <div className="ll"><div><div className="ll-t" style={{letterSpacing:'3px',fontSize:'22px',fontWeight:800}}>DEADHEAD</div><div style={{width:'100%',height:'2px',background:'#c0392b',margin:'5px 0'}}></div><div className="ll-s" style={{letterSpacing:'4px',fontSize:'10px'}}>TRUCKING LLC</div></div></div>
       <h1 className="lt">Sign In</h1>
       <p className="ls">Enter your dashboard password to continue.</p>
       <form onSubmit={handleSubmit}>

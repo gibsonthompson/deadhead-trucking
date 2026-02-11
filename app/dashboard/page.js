@@ -89,7 +89,7 @@ export default function DashboardPage() {
     `}</style>
     <div className="d">
       <header className="dh">
-        <div className="dl"><div className="dli"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" width="18" height="18"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div className="dlt">Deadhead Trucking</div><div className="dls">Quote Dashboard</div></div></div>
+        <div className="dl"><div><div className="dlt">DEADHEAD</div><div style={{width:'100%',height:'2px',background:'#c0392b',margin:'3px 0'}}></div><div className="dls">Quote Dashboard</div></div></div>
         <div className="da"><a href="/" className="db">View Site</a><button className="db" onClick={logout}>Logout</button></div>
       </header>
       <div className="body">
