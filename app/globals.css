@@ -94,7 +94,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgb
 .why-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
 
 /* COVERAGE */
-.cov-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.cov-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 640px; }
 .cov-routes { display: flex; flex-direction: column; margin-top: 28px; }
 .cov-route { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); gap: 12px; }
 .cov-route-name { font-size: 15px; font-weight: 500; color: var(--text-light); }
@@ -179,7 +179,7 @@ footer { background: var(--navy); border-top: 1px solid var(--border); padding: 
 /* RESPONSIVE - TABLET (1024px)       */
 /* ═══════════════════════════════════ */
 @media (max-width: 1024px) {
-  .about-grid, .cov-grid, .quote-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-grid, .quote-inner { grid-template-columns: 1fr; gap: 40px; }
   .services-grid { grid-template-columns: repeat(2,1fr); }
   .stats-inner { grid-template-columns: repeat(2,1fr); }
   .hero-stats { flex-wrap: wrap; gap: 32px; }

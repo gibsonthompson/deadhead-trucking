@@ -39,7 +39,7 @@ export default function HomePage() {
     {/* HERO */}
     <section className="hero"><div className="hero-bg"/><div className="hero-content">
       <div className="hero-eyebrow">Aurora, IL — Nationwide Coverage</div>
-      <h1 className="hero-title">Reliable freight<br/>across all 48 states.</h1>
+      <h1 className="hero-title">Reliable Freight<br/>Across All 48 States.</h1>
       <p className="hero-desc">Deadhead Trucking LLC is a federally authorized interstate carrier with 82+ trucks, 100+ drivers, and over 45 million miles logged annually. General freight, vehicle transport, and hazmat certified.</p>
       <div className="hero-actions">
         <a href="#quote" className="btn-primary">Request a Quote →</a>
@@ -65,7 +65,7 @@ export default function HomePage() {
     <section className="section" id="about"><div className="about-grid">
       <div>
         <div className="section-label">About Us</div>
-        <h2 className="section-title">Built on reliability. Driven by results.</h2>
+        <h2 className="section-title">Built On Reliability. Driven By Results.</h2>
         <p className="section-desc">Deadhead Trucking LLC is an authorized interstate freight carrier headquartered in Aurora, Illinois — in the heart of the Chicago metropolitan logistics corridor. We specialize in general freight, motor vehicle transport, and hazmat-certified hauling.</p>
         <p className="section-desc">With over 82 power units and 102 professional drivers, we&apos;ve built our reputation on consistent on-time performance, transparent communication, and operational scale that brokers and shippers depend on.</p>
       </div>
@@ -84,7 +84,7 @@ export default function HomePage() {
 
     {/* SERVICES */}
     <section className="section" id="services">
-      <div className="services-header"><div className="section-label">Our Services</div><h2 className="section-title">What we haul</h2><p className="section-desc">From dry van freight to vehicle transport and hazmat loads — we have the equipment, credentials, and team to move it.</p></div>
+      <div className="services-header"><div className="section-label">Our Services</div><h2 className="section-title">What We Haul</h2><p className="section-desc">From dry van freight to vehicle transport and hazmat loads — we have the equipment, credentials, and team to move it.</p></div>
       <div className="services-grid">
         {[
           { icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><rect x="1" y="6" width="22" height="12" rx="1"/><path d="M6 6V4a2 2 0 012-2h8a2 2 0 012 2v2"/></svg>, t:'General Freight', d:'Full truckload general freight services across the continental US. Dry van capacity for palletized goods, boxed cargo, and standard commodities.', f:['Full Truckload (FTL)','Dry Van Transport','Palletized & Boxed Cargo','Door-to-Door Delivery'] },
@@ -98,13 +98,13 @@ export default function HomePage() {
 
     {/* WHY */}
     <section className="why-section"><div className="why-inner">
-      <div className="section-label">Why Deadhead</div><h2 className="section-title">The carrier brokers keep coming back to</h2>
+      <div className="section-label">Why Deadhead</div><h2 className="section-title">The Carrier Brokers Keep Coming Back To</h2>
       <div className="why-grid">
         {[
-          {n:'01',t:'Scale you can count on',d:'82+ trucks and 102 drivers mean we have capacity to cover your lanes — even during peak season.'},
-          {n:'02',t:'FMCSA authorized & compliant',d:'Fully authorized for-hire interstate carrier with active USDOT and MC authority.'},
-          {n:'03',t:'45+ million miles proven',d:"Our annual mileage speaks for itself. We're a proven operator moving freight at scale, day in and day out."},
-          {n:'04',t:'Multi-cargo capability',d:'General freight, motor vehicles, and hazmat — three verticals under one authority. Fewer vendors, better rates.'},
+          {n:'01',t:'Scale You Can Count On',d:'82+ trucks and 102 drivers mean we have capacity to cover your lanes — even during peak season.'},
+          {n:'02',t:'FMCSA Authorized & Compliant',d:'Fully authorized for-hire interstate carrier with active USDOT and MC authority.'},
+          {n:'03',t:'45+ Million Miles Proven',d:"Our annual mileage speaks for itself. We're a proven operator moving freight at scale, day in and day out."},
+          {n:'04',t:'Multi-Cargo Capability',d:'General freight, motor vehicles, and hazmat — three verticals under one authority. Fewer vendors, better rates.'},
         ].map(w=><div className="why-card" key={w.n}><div className="why-num">{w.n}</div><div><h3>{w.t}</h3><p>{w.d}</p></div></div>)}
       </div>
     </div></section>
@@ -112,22 +112,13 @@ export default function HomePage() {
     {/* COVERAGE */}
     <section className="section" id="coverage"><div className="cov-grid">
       <div>
-        <div className="section-label">Service Area</div><h2 className="section-title">Coast to coast, out of Chicago</h2>
+        <div className="section-label">Service Area</div><h2 className="section-title">Coast To Coast, Out Of Chicago</h2>
         <p className="section-desc">Headquartered in Aurora, IL — 40 miles west of Chicago — we operate interstate routes covering all 48 contiguous states with access to I-88, I-80, I-55, and I-294.</p>
         <div className="cov-routes">
           {[['Midwest Hub Operations','Core'],['East Coast Corridors','High Volume'],['Southern & Southeast Routes','Growing'],['West Coast & Mountain States','Full Coverage'],['Texas & Southwest Triangle','Active']].map(([n,t])=>(
             <div className="cov-route" key={n}><span className="cov-route-name">{n}</span><span className="cov-tag">{t}</span></div>
           ))}
         </div>
-      </div>
-      <div className="cov-map-box">
-        <div className="cov-map-label">Continental U.S. Coverage</div>
-        <svg viewBox="0 0 200 120" fill="none" style={{width:'100%',maxWidth:320}}>
-          <path d="M30 30 L50 22 L80 20 L110 22 L140 25 L160 32 L168 42 L170 55 L165 68 L155 78 L140 86 L120 92 L100 95 L80 96 L60 94 L45 88 L35 78 L28 65 L26 50 L28 38Z" stroke="var(--border)" strokeWidth="1" fill="none"/>
-          <circle cx="118" cy="42" r="5" fill="#c0392b" opacity="0.2"/><circle cx="118" cy="42" r="2.5" fill="#c0392b"/>
-        </svg>
-        <div className="cov-hq-name">Aurora, Illinois</div>
-        <div className="cov-hq-detail">Company Headquarters</div>
       </div>
     </div></section>
 
@@ -141,10 +132,14 @@ export default function HomePage() {
     {/* DRIVERS */}
     <section className="drivers" id="drivers"><div className="drivers-bg"/><div className="drivers-inner">
       <div className="section-label" style={{justifyContent:'center',display:'flex'}}>Now Hiring</div>
-      <h2 className="section-title" style={{textAlign:'center'}}>Drive with Deadhead</h2>
+      <h2 className="section-title" style={{textAlign:'center'}}>Drive With Deadhead</h2>
       <p className="section-desc" style={{textAlign:'center',margin:'0 auto'}}>We&apos;re looking for experienced CDL drivers. Competitive pay, consistent miles, and a team that respects the work you do.</p>
       <div className="driver-benefits">
-        {[['💰','Competitive Pay','Top-of-market rates with consistent weekly miles'],['🛣️','Steady Miles','45M+ fleet miles annually keeps you moving'],['🤝','Driver-First Culture','Dispatch that communicates and actually supports']].map(([i,t,d])=>(
+        {[
+          [<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>,'Competitive Pay','Top-of-market rates with consistent weekly miles'],
+          [<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><path d="M5 18h14M5 14h14M5 10h14M5 6h14"/></svg>,'Steady Miles','45M+ fleet miles annually keeps you moving'],
+          [<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c0392b" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,'Driver-First Culture','Dispatch that communicates and actually supports']
+        ].map(([i,t,d])=>(
           <div className="benefit" key={t}><div className="benefit-icon">{i}</div><div className="benefit-title">{t}</div><div className="benefit-desc">{d}</div></div>
         ))}
       </div>
@@ -155,7 +150,7 @@ export default function HomePage() {
     {/* QUOTE */}
     <section className="quote" id="quote"><div className="quote-inner">
       <div className="quote-info">
-        <div className="section-label">Get Started</div><h2 className="section-title">Request a freight quote</h2>
+        <div className="section-label">Get Started</div><h2 className="section-title">Request A Freight Quote</h2>
         <p className="section-desc">Whether you&apos;re a broker or shipper looking for a reliable carrier, fill out the form and our dispatch team will get back to you.</p>
         <div className="contact-items">
           <div className="contact-item"><div className="contact-icon"><PhoneIcon/></div><div><h4>Phone</h4><p><a href="tel:3312644842">(331) 264-4842</a></p></div></div>
