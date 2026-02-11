@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Deadhead Trucking LLC is a premier interstate freight carrier based in Aurora, IL. 82+ trucks, 102 drivers, 45M+ miles annually. General freight, motor vehicles, hazmat certified. MC-1286521 | USDOT 3689437',
   keywords: 'trucking company, freight carrier, Aurora IL, interstate trucking, general freight, motor vehicle transport, hazmat carrier, USDOT 3689437, MC-1286521',
   icons: {
-    icon: '/favicon(1).svg',
+    icon: '/favicon (1).svg',
   },
 }
 
